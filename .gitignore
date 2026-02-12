@@ -1,0 +1,16 @@
+notepad .gitignore
+```
+
+Click **Yes** when it asks to create the file. Paste this inside:
+```
+.metadata/
+*.class
+*.jar
+*.log
+.settings/
+.project
+.classpath
+bin/
+target/
+.idea/
+*.iml
