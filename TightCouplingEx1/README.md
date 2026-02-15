@@ -1,4 +1,4 @@
-# 01a - Tight Coupling (using `new` keyword)
+#Tight Coupling (using `new` keyword)
 
 ## What is Tight Coupling?
 
