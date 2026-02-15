@@ -1,4 +1,4 @@
-# 01b - Tight Coupling (using `extends`)
+#Tight Coupling Ex2 (using `extends`)
 
 ## What is Tight Coupling through Inheritance?
 
