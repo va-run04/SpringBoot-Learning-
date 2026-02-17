@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- Spring calls new EmailNotification() -->
+    <bean id="email" class="com.vk.notification.EmailNotification"/>
+
+    <!-- Spring calls new SmsNotification() -->
+    <bean id="sms" class="com.vk.notification.SmsNotification"/>
+
+    <!-- SETTER INJECTION: Spring creates OrderService, then calls setNotification(emailBean) -->
+<!--     <bean id="orderService" class="com.vk.order.OrderService">
+        <property name="notification" ref="email"/>
+    </bean> --> 
+
+    <!-- CONSTRUCTOR INJECTION (uncomment this, comment the setter version above to try): -->
+    <bean id="orderService" class="com.vk.order.OrderService">
+        <constructor-arg name="notification" ref="sms"/>
+    </bean>
+    
+
+    <!-- if you Want SMS instead of Email? Just change ref="email" to ref="sms"
+         OrderService.java doesn't change. Only XML changes. -->
+</beans>
