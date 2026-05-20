@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: Ex_028_HttpStatusCodes
+  datasource:
+    url: jdbc:mysql://localhost:3306/springrestdb
+    username: root
+    password: Varun$NewMac
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+
+server:
+  port: 8080
