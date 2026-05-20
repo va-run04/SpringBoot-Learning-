@@ -1,17 +1,12 @@
-notepad .gitignore
-```
-
-Click **Yes** when it asks to create the file. Paste this inside:
-```
-.metadata/
+.DS_Store
+*/.DS_Store
 *.class
 *.jar
 *.log
+target/
+.metadata/
 .settings/
 .project
 .classpath
-bin/
-target/
 .idea/
-*.iml.DS_Store
-*/.DS_Store
+*.iml
