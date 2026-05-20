@@ -13,4 +13,5 @@ Click **Yes** when it asks to create the file. Paste this inside:
 bin/
 target/
 .idea/
-*.iml
+*.iml.DS_Store
+*/.DS_Store
