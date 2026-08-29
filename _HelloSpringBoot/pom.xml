@@ -42,13 +42,26 @@
 		</dependency>
 	</dependencies>
 
+
 	<build>
 		<plugins>
 			<plugin>
-				<groupId>org.springframework.boot</groupId>
-				<artifactId>spring-boot-maven-plugin</artifactId>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-surefire-plugin</artifactId>
+				<version>3.5.4</version>
+				<configuration>
+					<!-- Run tests in-process to avoid fork handshake issues -->
+					<forkCount>0</forkCount>
+
+					<!-- Optional: increase heap size if needed -->
+					<argLine>-Xmx1024m</argLine>
+
+					<!-- Prevent build failure if no tests are found -->
+					<failIfNoTests>false</failIfNoTests>
+				</configuration>
 			</plugin>
 		</plugins>
 	</build>
+
 
 </project>
